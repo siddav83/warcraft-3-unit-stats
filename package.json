@@ -1,0 +1,19 @@
+{
+  "name": "warcraft-3-unit-stats",
+  "version": "1.0.0",
+  "description": "Warcraft 3 - Unit stats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddav83/warcraft-3-unit-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddav83/warcraft-3-unit-stats/issues"
+  },
+  "homepage": "https://github.com/siddav83/warcraft-3-unit-stats#readme"
+}
