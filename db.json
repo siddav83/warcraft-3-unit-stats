@@ -1,0 +1,39 @@
+{
+  "race": [
+    {
+      "humans": [
+        {
+          "units": [
+            {
+              "id": 1,
+              "image": "peasant.gif",
+              "name": "Peasant",
+              "cost":
+              {
+                "gold": 75,
+                "lumber": 0
+              },
+              "hit-points": 200,
+              "armour-type": "medium",
+              "armour": "0",
+              "sight":
+              {
+                "day": 80,
+                "night": 60
+              },
+              "speed": 190,
+              "buildtime": 15,
+              "attack-type": "normal",
+              "weapon-type": "normal",
+              "ground-attack": 5.5,
+              "air-attack": "none",
+              "cooldown": 2,
+              "range":"melee"
+            }
+          ]
+        }
+      ]
+
+    }
+  ]
+}
