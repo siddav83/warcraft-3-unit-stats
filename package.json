@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/siddav83/warcraft-3-unit-stats#readme",
   "dependencies": {
-    "json-server": "^0.16.3"
-  }
+    "cheerio": "^1.0.0-rc.6",
+    "json-server": "^0.16.3",
+    "puppeteer": "^9.0.0"
+  },
+  "devDependencies": {},
+  "keywords": []
 }
