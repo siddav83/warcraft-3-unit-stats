@@ -31,6 +31,36 @@
                 "air-attack": "none",
                 "cooldown": 2,
                 "range":"melee"
+              },
+                            {
+                "id": 2,
+                "image": "peasant.gif",
+                "name": "Militia",
+                "cost":
+                {
+                  "gold": "none",
+                  "lumber": "none"
+                },
+                "hit-points": 220,
+                "armour-type": "heavy",
+                "armour":
+                {
+                  "attack": 4,
+                  "defence": 10
+                },
+                "sight":
+                {
+                  "day": 80,
+                  "night": 60
+                },
+                "speed": 190,
+                "buildtime": 15,
+                "attack-type": "normal",
+                "weapon-type": "normal",
+                "ground-attack": 5.5,
+                "air-attack": "none",
+                "cooldown": 2,
+                "range":"melee"
               }
             ]
           }
