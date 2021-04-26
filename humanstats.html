@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Warcraft III - Humans -&gt; Unit Stats</title>
+	<link rel="stylesheet" type="text/css" href="/war3/includes/war3-human.css">
+	<script language="JavaScript" src="/war3/includes/war3-human.js"></script>
+	<script language="JavaScript" src="/war3/includes/popup.js"></script>
+</head>
+
+<body bgcolor=#000000 marginwidth=0 marginheight=0 leftmargin=0 topmargin=0><link rel="stylesheet" type="text/css" href="/includes/anylink.css" />
+
+<script type="text/javascript" src="/includes/anylink.js">
+
+/***********************************************
+* AnyLink CSS Menu script- � Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="18">
+<tr>
+<td align="left"><a href="http://www.blizzard.com" width="107" height="18"><img src="/images/thin_logo.gif" width="107" height="18" border="0"></a></td>
+<td align="right" width="100%" height="18" style="background-image:url(/images/thin_bg.gif); background-position:left;">
+	<table cellpadding="0" cellspacing="0" border="0" height="18">
+	<tr>
+	
+	<td width="136" height="18" background="/images/thin_wc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'wc')"><img src="/images/pixel.gif" width="136" height="18" border="0"></a><br><div id="wc" class="anylinkcss" style="width:136; position:absolute;">
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/war3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/war3/ladder/game-select.aspx" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder</a>
+<a href ="/war3/ladder/w3xp-tournaments.aspx?Gateway=Lordaeron" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Tournaments</a>
+<a href ="https://us.forums.blizzard.com/en/warcraft3/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+
+   
+   
+   				</td>
+				
+				
+				
+				<td width="107" height="18" background="/images/thin_d.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'dia')"><img src="/images/pixel.gif" width="107" height="18" border="0"></a><br><div id="dia" class="anylinkcss" style="width:107; position:absolute;">
+
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/diablo2exp/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="/diablo2exp/faq/ladder.shtml" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Ladder FAQ</a>
+<a href ="https://us.battle.net/forums/en/bnet/12790218/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   
+   </td>
+				<td width="152" height="18" background="/images/thin_sc.gif" style="cursor:pointer;"><a href="" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, 'sc')"><img src="/images/pixel.gif" width="152" height="18" border="0"></a><br><div id="sc" class="anylinkcss" style="width:145; position:absolute;">
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> News</a>
+<a href ="/scc/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Strategy</a>
+<a href ="https://us.battle.net/forums/en/starcraft/" style="color:#FFAC04;"><b style="font-size:9px;">+</b> Forums</a>
+</div>
+
+   </td>
+ 
+ 
+ </tr>
+   </table>
+   </div></div>
+   </td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<STYLE type="text/css" id = "tableStyle">
+
+TD.ladderTable	 {  }
+TD.tableHeader	 { font-size: 10pt; font-weight: bold; color: #ffffff; }
+TD.tableFiller	 { font-size: 10pt; font-weight: bold; color: #ffffff; }
+TD.tableRank	 { font-size: 9pt; font-weight: bold; color: #ffffff; } 
+TD.tableData	 { font-size: 9pt; } 
+
+</style>
+
+<script language = "javascript">
+<!---
+	
+	var styleSheet;
+	
+	var agt    = navigator.userAgent.toLowerCase();
+	var appVer = navigator.appVersion.toLowerCase();
+	
+	var verInt = parseInt(appVer);
+	
+	var ie     = (appVer.indexOf('msie') != -1);
+
+	var opera  = (agt.indexOf('opera') != -1);
+	
+    var mozilla = ((agt.indexOf('mozilla')!=-1) && (agt.indexOf('opera')==-1) 
+					&& (agt.indexOf('spoofer')==-1) && (agt.indexOf('compatible') == -1) 
+	                && (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1));	
+
+	var ns4     = (mozilla && (verInt == 4));
+	
+	if (ie && !opera) {
+		styleSheet = document.styleSheets["tableStyle"];
+		
+		styleSheet.addRule ("TD.ladderTable", "border-color: #464646");
+		styleSheet.addRule ("TD.ladderTable", "border-width: 1px");
+		styleSheet.addRule ("TD.ladderTable", "border-style: solid");
+		
+		styleSheet.addRule ("TD.tableHeader", "background-color: #424242");
+		styleSheet.addRule ("TD.tableHeader", "border-style: solid");	
+		styleSheet.addRule ("TD.tableHeader", "border-width: 1px");		
+		styleSheet.addRule ("TD.tableHeader", "border-color: #979797 #979797 #171717 #171717");
+		styleSheet.addRule ("TD.tableHeader", "font-size: 10pt");	
+		styleSheet.addRule ("TD.tableHeader", "font-weight: bold");
+		styleSheet.addRule ("TD.tableHeader", "color: #ffffff");
+	
+		styleSheet.addRule ("TD.tableFiller", "background-image: url(/war3/images/crossshade-bg.gif)");
+		styleSheet.addRule ("TD.tableFiller", "border-style: solid");	
+		styleSheet.addRule ("TD.tableFiller", "border-width: 1px");		
+		styleSheet.addRule ("TD.tableFiller", "border-color: #171717 #171717 #979797 #979797");
+		styleSheet.addRule ("TD.tableFiller", "font-size: 10pt");	
+		styleSheet.addRule ("TD.tableFiller", "font-weight: bold");
+		styleSheet.addRule ("TD.tableFiller", "color: #ffffff");		
+		
+		styleSheet.addRule ("TD.tableRank", "background-color: #171717");
+		styleSheet.addRule ("TD.tableRank", "border-style: solid");	
+		styleSheet.addRule ("TD.tableRank", "border-width: 1px");		
+		styleSheet.addRule ("TD.tableRank", "border-color: #000000");
+		styleSheet.addRule ("TD.tableRank", "font-size: 9pt");	
+		styleSheet.addRule ("TD.tableRank", "font-weight: bold");
+		styleSheet.addRule ("TD.tableRank", "color: #ffffff");			
+		
+		styleSheet.addRule ("TD.tableData", "background-color: #080908");
+		styleSheet.addRule ("TD.tableData", "border-style: solid");	
+		styleSheet.addRule ("TD.tableData", "border-width: 1px");		
+		styleSheet.addRule ("TD.tableData", "border-color: #000000");
+		styleSheet.addRule ("TD.tableData", "font-size: 9pt");	
+		
+	} else if ( mozilla && !ns4 ) {
+		styleSheet = document.styleSheets[0];
+
+		styleSheet.insertRule('TD.ladderTable { border-style: solid; border-width: 1px; border-color: #464646; }',styleSheet.cssRules.length);
+		styleSheet.insertRule('TD.tableHeader { background-color: #424242; border-style: solid; border-width: 1px; border-color: #979797 #979797 #171717 #171717; font-size: 10pt; font-weight: bold; color: #ffffff; }',styleSheet.cssRules.length);
+		styleSheet.insertRule('TD.tableFiller { background-image: url(/war3/images/crossshade-bg.gif); border-style: solid; border-width: 1px; border-color: #171717 #171717 #979797 #979797; font-size: 10pt; font-weight: bold; color: #ffffff; }',styleSheet.cssRules.length);
+		styleSheet.insertRule('TD.tableRank	  { background-color: #171717; border-style: solid; border-width: 1px; border-color: #000000; font-size: 9pt; font-weight: bold; color: #ffffff; }',styleSheet.cssRules.length);
+		styleSheet.insertRule('TD.tableData	  { background-color: #080908; border-style: solid; border-width: 1px; border-color: #000000; font-size: 9pt; }',styleSheet.cssRules.length);					
+	
+	} else {
+	
+	
+	
+	}
+	
+	
+	
+-->
+</script>
+
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background="/war3/images/human/left-back.jpg" valign=top>
+	<table border=0 border=0 cellpadding=0 cellspacing=0>
+			<tr>
+				<td background=0><img src="/war3/images/human/war3-logo-off.gif" usemap="#war3" border=0 width=123 height=85></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/"><img src="/war3/images/human/menu/news-ovr.gif" name="news" alt="News" border=0 width=123 height=36></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/basics/" onMouseOver="ovrImg('basics')" onMouseOut="offImg('basics')"><img src="/war3/images/human/menu/basics-off.gif" name="basics" alt="Basics" border=0 width=123 height=35></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/neutral/" onMouseOver="ovrImg('neutral')" onMouseOut="offImg('neutral')"><img src="/war3/images/human/menu/neutral-off.gif" name="neutral" alt="Neutral" border=0 width=123 height=35></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/races.shtml" onMouseOver="ovrImg('races')" onMouseOut="offImg('races')"><img src="/war3/images/human/menu/races-off.gif" name="races" alt="Races" border=0 width=123 height=35></a></td>
+			</tr>
+			
+			<tr>
+				<td background=0><a href="/tournaments/season3/" onMouseOver="ovrImg('tournament')" onMouseOut="offImg('tournament')"><img src="/war3/images/human/menu/tournaments-off.gif" name="tournament" alt="Tournaments" border=0 width=123 height=35></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/ladder/" onMouseOver="ovrImg('ladder')" onMouseOut="offImg('ladder')"><img src="/war3/images/human/menu/ladder-off.gif" name="ladder" alt="Ladder" border=0 width=123 height=35></a></td>
+			</tr>
+			
+			<tr>
+				<td background=0><a href="/war3/maps" onMouseOver="ovrImg('maps')" onMouseOut="offImg('maps')"><img src="/war3/images/human/menu/maps-off.gif" name="maps" alt="Maps" border=0 width=123 height=35></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/faq/" onMouseOver="ovrImg('faq')" onMouseOut="offImg('faq')"><img src="/war3/images/human/menu/faq-off.gif" name="faq" alt="F.A.Q." border=0 width=123 height=35></a></td>
+			</tr>
+		
+			<tr>
+				<td background=0><a href="/war3/cheatcodes.shtml" onMouseOver="ovrImg('cheats')" onMouseOut="offImg('cheats')"><img src="/war3/images/human/menu/cheats-off.gif" name="cheats" alt="Cheats" border=0 width=123 height=35></a></td>
+			</tr>	
+			
+			<tr>
+				<td background=0><a href="/war3/files/" onMouseOver="ovrImg('files')" onMouseOut="offImg('files')"><img src="/war3/images/human/menu/files-off.gif" name="files" alt="Links / Files" border=0 width=123 height=35></a></td>
+			</tr>
+		<tr>
+	<td background=0>
+		<MAP NAME="menu_bot_Map">
+		<AREA SHAPE="rect" ALT="Blizzard Entertainment" COORDS="1,206,82,250" HREF="http://www.blizzard.com">
+		<AREA SHAPE="rect" ALT="Battle.net" COORDS="1,163,82,199" HREF="http://www.battle.net">
+		</MAP>
+		<img src="/war3/images/human/menu-bot2.gif" border=0 width=123 height=255 usemap = "#menu_bot_Map">
+	</td>
+	</tr>
+	</table>
+</td>
+<td background=0 valign=top rowspan=2 width=100%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background="/war3/images/human/submenu-back.jpg" valign=top width=100%>
+
+
+	</td>
+	</tr>
+	
+	<tr>
+	<td background=0 valign=top width=100%>
+<!-- CODE FOR ADS (REPLACE TABLE TO REMOVE ADS ------------------>
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/war3/images/human/ad-mid-leftback.gif" width=50%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100%>
+			<tr>
+			<td background=0 align=left><img src="/war3/images/human/ad-mid-left.gif" border=0 width=71 height=159></td>
+			<td background=0 align=right><img src="/war3/images/human/ad-left.gif" border=0 width=12 height=159></td>
+			</tr>
+			</table>
+		</td>
+		<td background=0 valign = "top">
+			<table border=0 cellpadding=0 cellspacing=0
+			<tr>
+			<td background=0><img src="/war3/images/human/ad-top.gif" border=0 width=468 height=36></td>
+			</tr>
+
+			<tr>
+		
+			</tr>
+
+			<tr>
+			<td background=0><a href="http://www.playhearthstone.com"><img src="/images/ads/hearthstone-468x60.jpg"></a>	<img src="/war3/images/human/ad-bot.gif" border=0 width=468 height=63></td>
+			</tr>
+			</table>
+		</td>
+		<td background="/war3/images/human/ad-mid-rightback.gif" width=50%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100%>
+			<tr>
+			<td background=0 align=left><img src="/war3/images/human/ad-right.gif" border=0 width=12 height=159></td>
+			<td background=0 align=right><img src="/war3/images/human/ad-mid-right.gif" border=0 width=71 height=159></td>
+			</tr>
+			</table>
+		</td>
+		</tr>
+		</table>
+<!-- END CODE FOR ADS ------------------------------------------->
+	</td>
+	</tr>
+
+	<tr>
+	<td background=0 valign=top width=100%>
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background="/war3/images/human/textbox-left.gif" valign=top><img src="/images/blank.gif" border=0 width=30 height=1></td>
+		<td background=0 valign=top width=100%>
+			<font face="arial,helvetica" size=-1><span>
+
+<CENTER>
+<a class="tiny" href="/war3/human/">Overview</a> |
+<a class="tiny" href="/war3/human/units/">Heroes and Units</a> |
+<a class="tiny" href="/war3/human/unitstats.shtml">Unit Stats</a> |
+<a class="tiny" href="/war3/human/buildings.shtml">Tech-tree</a> |
+<a class="tiny" href="/war3/human/arcanevault.shtml">Arcane Vault</a> |
+<a class="tiny" href="/war3/human/buildingstats.shtml">Building Stats</a> |
+<a class="tiny" href="/war3/human/basics.shtml">Basics</a> |
+<a class="tiny" href="/war3/human/advanced.shtml">Advanced</a> |
+<a class="tiny" href="/war3/human/combos.shtml">Combos</a> |
+<a class="tiny" href="/war3/human/killthehumans.shtml">Defeating Humans</a>
+</CENTER>
+<BR>
+
+<!-- MAIN CONTENT ----------------------------------------------->
+
+<!-- HEADER CODE --------------------------------------------------->
+<center>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<tr>
+<td background="/war3/images/human/header-back.gif" width=100%>
+	<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+	<td background=0><img src="/war3/images/human/header-left.gif" border=0 width=25 height=50></td>
+	<td background=0 align=center width=100%><img src="/war3/images/human/headers/header-unitstats.gif" border=0 width=400 height=50></td>
+	<td background=0><img src="/war3/images/human/header-right.gif" border=0 width=25 height=50></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</center>
+<!-- END HEADER CODE ----------------------------------------------->
+<p>
+
+
+
+<SPAN>
+For more information on unit stats go <a href="/war3/basics/unitstats.shtml">here</a>.
+
+<!----
+For a printable PDF version go <a href="/war3/basics/unitstats.shtml">here</a>.
+---->
+<P>
+</SPAN>
+
+<TABLE border=0 cellpadding=0 cellspacing = "0" width=100%><tr><td class = "ladderTable">
+		<table border=0 cellpadding=2 cellspacing=0 width=100%>
+		
+		<tr>
+		<td align=center class = "tableHeader"><font size=1><small><b>Unit</b></small></font></td>
+		<td align=center class = "tableHeader"><img src = "/war3/images/gold-sm.gif" width = "12" height = "12" align = "left"></td>		
+		<td align=center class = "tableHeader"><img src = "/war3/images/lumber-sm.gif" width = "12" height = "12" align = "left"></td>
+		<td align=center class = "tableHeader"><img src = "/war3/images/supply-sm.gif" width = "12" height = "12" align = "left"></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Hit Points</b></small></font></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Armor Type</b></small></font></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Armor</b></small></font></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Sight</b></small></font></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Speed</b></small></font></td>
+		<td align=center class = "tableHeader"><font size=1><small><b>Build Time</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Attack Type</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Weapon Type</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Ground Attack</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Air Attack</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Cooldown</b></small></font></td>		
+		<td align=center class = "tableHeader"><font size=1><small><b>Range</b></small></font></td>		
+		</tr>
+		
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/peasant.shtml">Peasant</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>75</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>220</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Medium</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>80/60</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>190</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>15</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>5.5</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>2</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Melee</small></font></td>		
+		</tr>
+	
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/militia.shtml">Militia</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>1</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>220</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>4/10</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>N/A</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>12.5/17</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>1.2</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Melee</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/footman.shtml">Footman</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>135</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>2</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>420</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>2/8</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>20</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>12.5/17</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.35</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Melee</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/rifleman.shtml">Rifleman</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>205</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>30</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>3</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>535</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Medium</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>0/6</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>26</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Pierce</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Instant</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>21/28.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>21/28.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>1.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>40/60</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/knight.shtml">Knight</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>245</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>60</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>4</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>835/985</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>5/11</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>350</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>45</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>34/43</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.4</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Melee</small></font></td>		
+		</tr>
+
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/priest.shtml">Priest</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>135</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>10</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>2</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>290/370</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Unarmored</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>28</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Magic</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>8.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>8.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>2</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>60</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/sorceress.shtml">Sorceress</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>155</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>20</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>2</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>325/405</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Unarmored</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>30</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Magic</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>11</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>11</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.75</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>60</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/spellbreaker.shtml">Spell Breaker</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>215</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>30</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>3</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>600</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Medium</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>3/9</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>300</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>28</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Normal</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>14/20</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>1.9</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>25</small></font></td>		
+		</tr>
+
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/flyingmachine.shtml">Flying Machine</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>90</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>30</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>200</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>2/8</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>180/110</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>400</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>13</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Siege/Pierce</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Missile/Instant</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>7.5/12</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>14.5/19</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>2.5/2</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Melee/50</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/mortarteam.shtml">Mortar Team</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>180</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>70</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>3</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>360</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>0/6</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>140/120</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>270</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>40</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Siege</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Artillery</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>58/79</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>3.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>25 min/<BR>115 max</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/siegeengine.shtml">Siege Engine</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>195</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>60</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>3</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>700</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Fort</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>2/8</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>220</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>55</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Siege</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Instant</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>50/68</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>13.5/18*</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>2.1</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>19/50</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/gryphonrider.shtml">Gryphon Rider</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>280</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>70</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>4</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>825/975</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Light</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>0/6</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>160/90</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>320</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>45</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Magic</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Mline</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>50/68</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>50/68</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>2.2/2.4</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>45</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/dragonhawk.shtml">Dragonhawk Rider</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>200</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>30</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>3</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>575/725</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Light</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1/7</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>140/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>350</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>28</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Pierce</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>19/25</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>19/25</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.75</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>30</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/waterelemental.shtml">Water Elemental 1</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>525</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>0</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>120/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>220</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>N/A</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Pierce</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>20</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>20</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>1.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>30</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/waterelemental.shtml">Water Elemental 2</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>675</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>120/80</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>220</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>N/A</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Pierce</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>35</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>35</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.5</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>30</small></font></td>		
+		</tr>
+
+		<tr>
+		<td align=center valign=top class = "tableRank"><font size=1><small><b><a href="/war3/human/units/waterelemental.shtml">Water Elemental 3</a></b></small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>900</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>Heavy</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>2</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>120/80</small></font></td>
+		<td align=center valign=top class = "tableRank"><font size=1><small>220</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>N/A</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Pierce</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>Missile</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>45</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>45</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>1.5</small></font></td>		
+		<td align=center valign=top class = "tableRank"><font size=1><small>30</small></font></td>		
+		</tr>
+
+
+<tr>
+		<td align=center valign=top class = "tableData"><font size=1><small><b><a href="/war3/human/units/phoenix.shtml">Phoenix</a></b></small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>None</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1250</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>Light</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>1</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>160/60</small></font></td>
+		<td align=center valign=top class = "tableData"><font size=1><small>320</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>N/A</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Magic</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>Msplash</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>68</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>68</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>1.4</small></font></td>		
+		<td align=center valign=top class = "tableData"><font size=1><small>60</small></font></td>		
+		</tr>
+
+		</table>
+</td></tr></table>
+<P>
+
+
+<B>Notes</B><BR>
+*Mline is received with the Storm Hammers upgrade which allows the Gryphon to strike through their target
+at the next opponent, dealing damage to both.
+<P>
+*The Flying Machine's first (ground) attack (Siege) only comes after researching Flying Machine Bombs.
+<P>
+*You must have researched Barrage to get the Siege Engine's air attack.
+<P>
+
+<!-- END MAIN CONTENT ------------------------------------------->
+<br><br><br>
+<center>
+<font face="arial,helvetica" size=1><small>
+<a class="tiny" href="http://us.blizzard.com/en-us/company/about/privacy.html">Online Privacy Policy</a><br>
+<a class="tiny" href="/tou.shtml">Battle.net Terms of Use Agreement</a><br>
+<a class="tiny" href="/legalfaq.shtml">&copy;2019 Blizzard Entertainment. All rights reserved.</a>
+</small></font>
+</center>
+<!--- Google Analytics -------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-544112-16");
+pageTracker._setDomainName("battle.net");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div style="display:none;">
+<iframe src="http://view.atdmt.com/NTB/iview/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01?click=" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" allowtransparency="true" width="1" height="1">
+<script language="JavaScript" type="text/javascript">
+document.write('<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank"><img src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/"/></a>');
+</script>
+<noscript>
+<a href="http://clk.atdmt.com/NTB/go/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" target="_blank">
+<img border="0" src="http://view.atdmt.com/NTB/view/48a2358b5be444d995caf135b19a1389/direct;wi.1;hi.1/01/" />
+</a>
+</noscript>
+</iframe>
+</div>
+			</span></font>
+		</td>
+		<td background="/war3/images/human/textbox-right.gif" valign=top><img src="/images/blank.gif" border=0 width=30 height=1></td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+
+	<tr>
+	<td background=0 valign=bottom width=100%>
+
+<!-- PAGE NAVIGATION -------------------------------------------->
+
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td background=0 width=50% align=left>
+			<table border=0 cellpadding=0 cellspacing=0>
+			<tr>
+			<td background=0 rowspan=3><a href="/war3/human/units/" onMouseOver="ovrImg('prev')" onMouseOut="offImg('prev')"><img src="/war3/images/human/prev-off.gif" name="prev" border=0 width=60 height=74></a></td>
+			<td background=0 valign=top><img src="/war3/images/human/prev-top.gif" border=0 width=165 height=32></td>
+			<td background=0 rowspan=3><img src="/war3/images/human/prev-right.gif" border=0 width=20 height=74></td>
+			</tr>
+
+			<tr>
+			<td background="/war3/images/human/prev-back.gif" align=left valign=center><img src="/images/blank.gif" border=0 width=1 height=33 align=center>
+				<font face="arial,helvetica" size=1><small>
+				
+				<a class="tiny" href="/war3/human/units/">Heroes and Units</a>
+				
+				</small></font>
+			</td>
+			</tr>
+			
+			<tr>
+			<td background=0 valign=bottom><img src="/war3/images/human/prev-bot.gif" border=0 width=165 height=9></td>
+			</tr>
+			</table>
+		</td>
+		<td background=0 width=50% align=right>
+			<table border=0 cellpadding=0 cellspacing=0>
+			<tr>
+			<td background=0 rowspan=3><img src="/war3/images/human/next-right.gif" border=0 width=20 height=74></td>
+			<td background=0 valign=top><img src="/war3/images/human/next-top.gif" border=0 width=165 height=32></td>
+			<td background=0 rowspan=3><a href="/war3/human/buildings.shtml" onMouseOver="ovrImg('next')" onMouseOut="offImg('next')"><img src="/war3/images/human/next-off.gif" name="next" border=0 width=60 height=74></a></td>
+			</tr>
+
+			<tr>
+			<td background="/war3/images/human/next-back.gif" align=right valign=center><img src="/images/blank.gif" border=0 width=1 height=33 align=center>
+				<font face="arial,helvetica" size=1><small>
+				
+				<a class="tiny" href="/war3/human/buildings.shtml">Tech-tree</a>
+				
+				</small></font>
+			</td>
+			</tr>
+			
+			<tr>
+			<td background=0 valign=bottom><img src="/war3/images/human/next-bot.gif" border=0 width=165 height=9></td>
+			</tr>
+			</table>
+		</td>		
+		</tr>
+		</table>
+
+<!-- END PAGE NAVIGATION ---------------------------------------->
+	</td>
+	</tr>
+	</table>
+</td>
+<td background="/war3/images/human/right.gif" valign=top rowspan=2><img src="/images/blank.gif" border=0 width=15 height=1></td>
+</tr>
+
+<tr>
+<td background="/war3/images/human/left-back.jpg" valign=bottom><img src="/war3/images/human/blizz-logo.gif" usemap="#blizz" border=0 width=123 height=79></td>
+</tr>
+</table>
+
+<!-- IMAGE MAPS ------------------------------------------------->
+<map name="blizz">
+<area shape=rect coords="4,30,79,74" href="http://www.battle.net" alt="Battle.net">
+</map>
+
+
+<map name="war3">
+<area shape=rect coords="4,7,109,49" href="/war3/" alt="Warcraft III">
+</map>
+<!-- END IMAGE MAPS --------------------------------------------->
+
+
+</body>
+</html>

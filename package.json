@@ -20,8 +20,9 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.6",
     "json-server": "^0.16.3",
-    "puppeteer": "^9.0.0"
+    "puppeteer": "^9.0.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9"
   },
-  "devDependencies": {},
   "keywords": []
 }
